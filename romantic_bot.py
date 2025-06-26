@@ -6,8 +6,9 @@ from aiogram.filters import Command
 from aiogram.utils.keyboard import InlineKeyboardBuilder
 from aiogram.enums import ParseMode
 
-API_TOKEN = "7711930364:AAEoVeW_M5JhhHCOx_234MU1zO4kgDMltSs"
-OWNER_ID = 547994168  # Замени на свой Telegram ID (узнать через @userinfobot)
+import os
+API_TOKEN = os.getenv("API_TOKEN")
+OWNER_ID = int(os.getenv("OWNER_ID"))
 
 # Меню (можно дополнить блюдами)
 menu = [
