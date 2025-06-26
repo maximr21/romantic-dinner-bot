@@ -3,12 +3,8 @@ services:
     name: romantic-dinner-bot
     env: python
     plan: free
-    branch: main
     buildCommand: pip install -r requirements.txt
     startCommand: python romantic_bot.py
+    pythonVersion: 3.11.9
+    runtime: python
     autoDeploy: true
-    envVars:
-      - key: API_TOKEN
-        fromSecret: API_TOKEN
-      - key: OWNER_ID
-        fromSecret: OWNER_ID
