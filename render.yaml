@@ -5,7 +5,7 @@ services:
     branch: main
     plan: free
     buildCommand: pip install -r requirements.txt
-    startCommand: python romantic_bot_v3.py
+    startCommand: python romantic_bot.py
     autoDeploy: true
     envVars:
       - key: API_TOKEN
