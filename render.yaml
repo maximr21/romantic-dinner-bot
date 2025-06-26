@@ -2,8 +2,8 @@ services:
   - type: web
     name: romantic-dinner-bot
     env: python
-    plan: free # или другой план по необходимости
     branch: main
+    plan: free
     buildCommand: pip install -r requirements.txt
     startCommand: python romantic_bot_v3.py
     autoDeploy: true
@@ -12,4 +12,3 @@ services:
         fromSecret: API_TOKEN
       - key: OWNER_ID
         fromSecret: OWNER_ID
-    healthCheckPath: /
