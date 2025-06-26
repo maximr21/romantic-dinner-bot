@@ -1,8 +1,15 @@
 services:
-  - type: worker
-    name: romantic-bot
-    runtime: python
-    repo: https://github.com/maximr21/romantic-dinner-bot
+  - type: web
+    name: romantic-dinner-bot
+    env: python
+    plan: free # или другой план по необходимости
     branch: main
     buildCommand: pip install -r requirements.txt
-    startCommand: python3 romantic_bot.py
+    startCommand: python romantic_bot_v3.py
+    autoDeploy: true
+    envVars:
+      - key: API_TOKEN
+        fromSecret: API_TOKEN
+      - key: OWNER_ID
+        fromSecret: OWNER_ID
+    healthCheckPath: /
