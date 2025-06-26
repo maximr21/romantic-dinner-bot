@@ -2,9 +2,7 @@ services:
   - type: web
     name: romantic-dinner-bot
     env: python
-    plan: free
+    pythonVersion: 3.11.9
     buildCommand: pip install -r requirements.txt
     startCommand: python romantic_bot.py
-    pythonVersion: 3.11.9
-    runtime: python
     autoDeploy: true
